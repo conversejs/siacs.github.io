@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Conversations.im Summer of Code 2018</title>
+    <link href="https://conversations.im/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body style="padding-top: 20px">
+  <div class="container">
+    <h2>Conversations.im Summer of Code 2018</h2>
+    <p class="lead">Conversations started out as an easy to use Jabber client for the Android platform but quickly became an umbrella project for all sorts of UX improvements to the XMPP ecosystem.</p>
+    <h3>Getting involved</h3>
+    <p>Conversations puts a lot of focus on <em>user experience</em> so we encourage you to become a <em>user</em> of XMPP first.<br>To become a user you need to:</p>
+      <ol>
+        <li>Download an XMPP client (<a href="https://conversations.im">Conversations</a><sup><small>1</small></sup> on Android and <a href="https://gajim.org">Gajim</a> on Windows and Linux)</li>
+        <li>Create an account on an XMPP server. For startes we recommend creating an account on the <em>conversations.im</em> server. In both Gajim and Conversations you can tick the checkbox <em>Create new account</em> during initial setup.</li>
+      </ol>
+    <p>After downloading a client and creating an account please join the conversations group chat (MUC) under the address: <a href="xmpp:gsoc@conference.conversations.im?join">xmpp:gsoc@conference.conversations.im?join</a>.</p>
+    <p><sup><small>1</small></sup> Conversations is not available for free on the PlayStore. However we wouldn’t ask potential applicants to buy the application. Instead either sideload it from the Open Source App Store <a href="https://f-droid.org/repository/browse%20/?fdid=eu.siacs.conversations">F-Droid</a>, build it <a href="https://github.com/siacs/Conversations">from source</a> or join with a different client first and ask for a promo code in the GSoC group chat, that will allow you to install the app for free from the Google PlayStore.</p>
+    <h3>Project Ideas</h3>
+    <p class="lead">Keep in mind that the following project ideas are just <em>ideas</em>. In general we are interested in anything that has the ability to improve the UX for end users and newcomers to XMPP. This doesn’t necessarily have to involve client development but can also be about aiding the user to pick the right server or about contact discovery.</p>
+    <h4>Turn Compliance Tester into Webservice</h4>
+    <ul>
+      <li><strong>Software Project:</strong> XMPP Compliance Tester</li>
+      <li><strong>Software URL:</strong> <a href="https://conversations.im/compliance">conversations.im/compliance/</a></li>
+      <li><strong>Software VCS:</strong> <a href="https://github.com/iNPUTmice/ComplianceTester">github.com/iNPUTmice/ComplianceTester</a></li>
+      <li><strong>Software Description:</strong> A tool totest XMPP servers for compatibility with various compliance suites.</li>
+      <li><strong>Brief explanation:</strong> Adding a server to the compliance tester overview is a rather complicated task. A server admin (or interested user) has to download the Compliance Tester, run it, and submit the result as a pull request on github. Afterwards a series of hacked together scripts will evaluate those results and create the overview page. This Google Summer of Code project is to create a webservice that will run the test automatially in certain intervals, store the test results in a database and dynamically create the overview page from that database.</li>
+      <li><strong>Required skills: </strong> Java, HTML, Basic XMPP knowledge</li>
+      <li><strong>Implementation Language:</strong> Java 8, Babbler XMPP library</li>
+      <li><strong>Contact details:</strong> inputmice@siacs.eu</li>
+    </ul>
+    <h4>Implement client-side MIX in Conversations</h4>
+    <ul>
+	    <li><strong>Software Project:</strong> Conversations</li>
+	    <li><strong>Software URL:</strong> <a href="https://conversations.im">conversations.im</a></li>
+	    <li><strong>Software VCS URL:</strong> <a href="https://github.com/siacs/Conversations">github.com/siacs/Conversations</a></li>
+	    <li><strong>Software Description</strong> Conversations is a state of the art mobile instant messaging client for Android. It provides a modern user experience and is on top of the current developments in XMPP standards.</li>
+	    <li><strong>Brief explanation:</strong> MIX is the upcoming standard in group chats. This project would be one of the first implementations of this standard.</li>
+	    <li><strong>Expected results:</strong>
+		    <ul>
+			    <li>Allow users to subscribe to MIX channels</li>
+			    <li>Display users in a channel</li>
+			    <li>Implement UI to create new channels</li>
+		</ul>
+	</li>
+	<li><strong>Difficulty:</strong> Moderate</li>
+	<li><strong>Implementation Language:</strong> Java/Android</li>
+	<li><strong>Contact Details:</strong> MUC at <a href="xmpp:gsoc@conference.conversations.im?join">gsoc@conference.conversations.im</a></li>
+    </ul>
+    <h4>Jingle encrypted A/V calling</h4>
+    <ul>
+            <li><strong>Software Project:</strong> Conversations</li>
+            <li><strong>Software URL:</strong> <a href="https://conversations.im">conversations.im</a></li>
+            <li><strong>Software VCS URL:</strong> <a href="https://github.com/siacs/Conversations">github.com/siacs/Conversations</a></li>
+            <li><strong>Software Description</strong> Conversations is a state of the art mobile instant messaging client for Android. It provides a modern user experience and is on top of the current developments in XMPP standards.</li>
+            <li><strong>Brief explanation:</strong> The ability to make voice and video calls is by far the most requested feature for Conversations. With Jingle there is a standard extension in XMPP to negoitate P2P audio and video sessions. Implementing video calls faces many challanges. Not only network and bandwidth wise but also UX wise.<br>Quite frankly this is a rather challenging project. We aim to actually merge the code that comes out of GSoC and we can't merge the code if the UX is bad (either because of too many edge case where it simply doesn’t work or because it looks terrible.)</li>
+            <li><strong>Expected results:</strong>
+                    <ul>
+                            <li>Make libwebrtc build in Conversations</li>
+                            <li>Setup some basic A/V calls between two Conversations clients</li>
+                            <li>Translate the SDP output of libwrtc to Jingle syntax</li>
+                            <li>(Re)negoitae the session on network switches or screen rotations</li>
+                            <li>Implement a great accept call and call UI</li>
+                </ul>
+        </li>
+        <li><strong>Difficulty:</strong> Very hard</li>
+        <li><strong>Implementation Language:</strong> Java/Android</li>
+        <li><strong>Contact Details:</strong> MUC at <a href="xmpp:gsoc@conference.conversations.im?join">gsoc@conference.conversations.im</a></li>
+    </ul>
+<h4>Add OMEMO support to Babbler</h4>
+ <ul>
+	    <li><strong>Software Project:</strong> Babbler</li>
+	    <li><strong>Software URL:</strong> <a href="https://sco0ter.bitbucket.io/babbler/?">sco0ter.bitbucket.io/babbler/?</a></li>
+	    <li><strong>Software VCS URL:</strong> <a href="https://bitbucket.org/sco0ter/babbler/src">bitbucket.org/sco0ter/babbler/src</a></li>
+	    <li><strong>Software Description</strong> Babbler is a young XMPP client library for Java SE 8 based on JAXB as XML processing technology.</li>
+	    <li><strong>Brief explanation:</strong> Add support for the OMEMO encryption to Babbler</li>
+	    <li><strong>Expected results:</strong>
+		    <ul>
+			    <li>Being able to send e2ee messages back and forth with other OMEMO implementations</li>
+			    <li>Basic trust model. Ability to enable disable devices</li>
+		</ul>
+	</li>
+        <li><strong>Knowledge Prerequisite:</strong>
+          <ul><li>Java 8</li><li>JAXB</li><li>Ability to read and understand RFC’s and XEP’s</li><li>Awareness for security and crypto</li></ul>
+        </li>
+	<li><strong>Difficulty:</strong> Moderate</li>
+	<li><strong>Implementation Language:</strong> Java 8</li>
+        <li><strong>Teaser Task:</strong> Create a Babbler Extension that represents a OMEMO device list; Create a very minimal client that logs in, subscribes to the device list PEP node and prints the contents.</li>
+	<li><strong>Contact Details:</strong> MUC at <a href="xmpp:gsoc@conference.conversations.im?join">gsoc@conference.conversations.im</a></li>
+    </ul>
+    <h4>Add OMEMO support to Converse.js</h4>
+    <ul>
+      <li><strong>Software Project:</strong> Converse.js</li>
+      <li><strong>Software URL:</strong> <a href="https://conversejs.org/">conversejs.org</a></li>
+      <li><strong>Software VCS:</strong> <a href="https://github.com/jcbrand/converse.js">github.com/jcbrand/converse.js</a></li>
+      <li><strong>Software Description:</strong> Converse is an XMPP that runs in your browser written in pure JavaScript</li>
+      <li><strong>Brief explanation:</strong> Add support for the E2E encryption OMEMO. Can probably be based upon existing strophe <a href="https://github.com/Shokodemon/strophe-omemo">library</a></li>
+      <li><strong>Expected results:</strong>
+        <ul>
+	  <li>Send and receive messages</li>
+	  <li>Trust UI; Approve keys; Mark messages as trusted in UI</li>
+	</ul>
+      </li>
+      <li><strong>Knowledge Prerequisite:</strong>
+        <ul>
+          <li>JavaScript</li>
+          <li>Ability to read and understand RFC’s and XEP’s</li>
+	  <li>Awareness for security and crypto</li>
+	</ul>
+      </li>
+      <li><strong>Contact Detail:</strong> MUC at <a href="xmpp:discuss@conference.conversejs.org?join">discuss@conference.conversejs.org</a></li>     
+    </ul>
+    <h3>Your application</h3>
+    <p class="lead">Thank you for your interest in participating in Google’s Summer of Code with conversations.im. Your application can be free form but should answer the following questions.</p>
+    <ul>
+      <li><strong>What made you choose <em>Conversations.im</em>?</strong></li>
+      <li><strong>What is your background?</strong> Have you been using XMPP before? Have you been involved with another open source community?</li>
+      <li><strong>Brief description of the project</strong></li>
+      <li><strong>Detailed description</strong> What do you expect to do over the summer? What are the deliverables?</li>
+      <li><strong>Why do you want to work on that project?</strong></li>
+      <li><strong>What inspires you?</strong> What other pieces of software do you look up to that can act as a inspiration for your project?</li>
+      <li><strong>How did you prepare for your project?</strong> What documents did you read? Did you do any prototypes that can prepare you for the project?</li>
+      <li><strong>What kind challanges do you expect?</strong> What potential problems do you expect to run into?</li>
+      <li><strong>How will you schedule your time?</strong> Give us a brief week-by-week summary of what you are planning to do</li>
+      <li><strong>Contact details</strong> What is your Jabber-ID? What is your email address?</li>
+    </ul>
+ </div>
+</body>
