@@ -92,6 +92,83 @@
 	<li><strong>Implementation Language:</strong> Java 8</li>
 	<li><strong>Contact Details:</strong> MUC at <a href="xmpp:conversations@conference.siacs.eu?join">conversations@conferenc.siacs.eu</a></li>
     </ul>
- 
+<h4>Add OpenPGP for XMPP Instant Messaging support to Smack</h4>
+<ul>
+  <li><strong>Software Project:</strong> Smack</li>
+  <li><strong>Software URL:</strong> <a href="https://igniterealtime.org/projects/smack/">https://igniterealtime.org/projects/smack/</a></li>
+  <li><strong>Software VCS URL:</strong> <a href="https://github.com/igniterealtime/Smack">https://github.com/igniterealtime/Smack</a></li>
+  <li><strong>Software Description</strong> Smack is a highly modular and portable open source XMPP client library written in Java for Android and Java (SE) VMs.</li>
+  <li><strong>Brief explanation:</strong> Add support for
+  the <a href="https://xmpp.org/extensions/xep-0374.html">OpenPGP for
+  XMPP Instant Messaging (XEP-0374)</a> encryption to Smack. This
+  includes the creation of a portable high-level OpenPGP library based
+  on existing low-level crytp libraries
+  like <a href="https://www.bouncycastle.org/">Bouncycastle</a>.</li>
+  <li><strong>Expected results:</strong>
+	<ul>
+	  <li>Being able to send OpenPGP E2EE messages back and forth.</li>
+	  <li>Basic trust models, including trust-on-first-use.</li>
+	</ul>
+  </li>
+  <li><strong>Difficulty:</strong> Hard</li>
+  <li><strong>Implementation Language:</strong> Android compatible Java 8</li>
+  <li><strong>Contact Details:</strong> MUC at <a href="xmpp:gsoc@conference.conversations.im?join">gsoc@conference.conversations.im</a></li>
+</ul>
+<h4>Add support for Entity Capabilities 2.0 to Smack</h4>
+<!-- SMACK-792 -->
+<ul>
+  <li><strong>Software Project:</strong> Smack</li>
+  <li><strong>Software URL:</strong> <a href="https://igniterealtime.org/projects/smack/">https://igniterealtime.org/projects/smack/</a></li>
+  <li><strong>Software VCS URL:</strong> <a href="https://github.com/igniterealtime/Smack">https://github.com/igniterealtime/Smack</a></li>
+  <li><strong>Software Description</strong> Smack is a highly modular and portable open source XMPP client library written in Java for Android and Java (SE) VMs.</li>
+  <li><strong>Brief
+  explanation:</strong> <a href="https://xmpp.org/extensions/xep-0390.html">Entity
+  Capabilities 2.0 (XEP-0390)</a> is an overhaul
+  of <a href="https://xmpp.org/extensions/xep-0115.html">Entity
+  Capabilities (XEP-0115)</a>, which provides an efficient way for
+  remote entities to signal their capabilities. This mechanism reduces
+  network traffic and speeds up most other protocols. In order to add
+  support for XEP-0390, the existing ServcieDiscoveryManger code must
+  be extended to support for plugable remote entity feature discovery
+  mechanisms.
+  <li><strong>Expected results:</strong>
+	<ul>
+	  <li>Support for Entity Capabilities 2.0.</li>
+	  <li>Extending the existing Service Discovery code to allow for plugable feature-cache mechanisms.</li>
+	</ul>
+  </li>
+  <li><strong>Difficulty:</strong> Moderate</li>
+  <li><strong>Implementation Language:</strong> Android compatible Java 8</li>
+  <li><strong>Contact Details:</strong> MUC at <a href="xmpp:gsoc@conference.conversations.im?join">gsoc@conference.conversations.im</a></li>
+</ul>
+<h4>Add support for XMPP over WebSocket to Smack</h4>
+<ul>
+  <li><strong>Software Project:</strong> Smack</li>
+  <li><strong>Software URL:</strong> <a href="https://igniterealtime.org/projects/smack/">https://igniterealtime.org/projects/smack/</a></li>
+  <li><strong>Software VCS URL:</strong> <a href="https://github.com/igniterealtime/Smack">https://github.com/igniterealtime/Smack</a></li>
+  <li><strong>Software Description</strong> Smack is a highly modular and portable open source XMPP client library written in Java for Android and Java (SE) VMs.</li>
+  <li><strong>Brief explanation:</strong> WebSockets
+  (<a href="https://tools.ietf.org/html/rfc6455">RFC 6455</a>) are an
+  alternative way to establish a connection between a server and a
+  client. This project idea is about adding support
+  for <a href="https://tools.ietf.org/html/rfc7395">XMPP over
+  WebSocket (RFC 7395)</a> to Smack. The student needs to implement
+  a new `XMPPWebSocketConnection` which extends the existing
+  `XMPPConnection` interface. The resulting API must be compatible to
+  the existing Smack code and must also be usable on Android
+  devices.</li>
+  <li><strong>Expected results:</strong>
+	<ul>
+	  <li>Being able to connect to XMPP services via WebSocket.</li>
+	  <li>Definition of a WebSocket interface on top of the used
+	  WebSocket libraries, allowing for differeet WebSocket
+	  implementations.</li>
+	</ul>
+  </li>
+  <li><strong>Difficulty:</strong> Moderate</li>
+  <li><strong>Implementation Language:</strong> Android compatible Java 8</li>
+  <li><strong>Contact Details:</strong> MUC at <a href="xmpp:gsoc@conference.conversations.im?join">gsoc@conference.conversations.im</a></li>
+</ul>
+
  </div>
 </body>
