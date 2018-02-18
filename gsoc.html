@@ -196,6 +196,102 @@
   <li><strong>Implementation Language:</strong> Android compatible Java 8</li>
   <li><strong>Contact Details:</strong> MUC at <a href="xmpp:gsoc@conference.conversations.im?join">gsoc@conference.conversations.im</a></li>
   </ul>
+
+<h4>Dino: OMEMO improvements</h4>
+<ul>
+  <li><strong>Software Project:</strong> Dino</li>
+  <li><strong>Software URL:</strong> <a href="https://dino.im">https://dino.im</a></li>
+  <li><strong>Software VCS URL:</strong> <a href="https://github.com/dino/dino">https://github.com/dino/dino</a></li>
+  <li><strong>Software Description</strong> Dino is a open-source chat client for the desktop. It aims to provide a clean user interface, reliable Jabber/XMPP experience and modern features while having the users privacy in mind.</li>
+  <li><strong>Brief explanation:</strong> The OMEMO encryption protocol allows to have forward-secret encrypted chats with multiple parties/devices on the XMPP network. Dino already includes a basic implementation of OMEMO, currently supporting simple encrypted two-person chats. However our OMEMO implementation lacks support for groupchats and still requires proper ways to verify keys of other users and manage trust in user keys. We'd like to use the "Blind trust before verification" model by default, with possibility to entirely disable blind trust for the paranoid.</li>
+  <li><strong>Relevant readings:</strong>
+    <ul>
+        <li><a href="https://xmpp.org/extensions/xep-0384.html">XEP-0384: OMEMO Encryption</a></li>
+        <li><a href="https://gultsch.de/trust.html">Blind Trust Before Verification</a></li>
+    </ul>
+  </li>
+  <li><strong>Expected results:</strong>
+      <ul>
+          <li>Allow to verify your own devices and keys of other users, maintain trust in local database.</li>
+          <li>Implement "Blind trust before Verification"</li>
+          <li>Notify the user about new own devices, asking for verification</li>
+          <li>Show message in conversation with user when they add a new device. Ask for verification if required.</li>
+      </ul>
+  </li>
+  <li><strong>Difficulty:</strong> Moderate</li>
+  <li><strong>Implementation Language:</strong> Vala</li>
+  <li><strong>Contact Details:</strong> MUC at <a href="xmpp:gsoc@dino.im?join">gsoc@dino.im</a></li>
+</ul>
+
+<h4>Dino: Message search</h4>
+<ul>
+  <li><strong>Software Project:</strong> Dino</li>
+  <li><strong>Software URL:</strong> <a href="https://dino.im">https://dino.im</a></li>
+  <li><strong>Software VCS URL:</strong> <a href="https://github.com/dino/dino">https://github.com/dino/dino</a></li>
+  <li><strong>Software Description</strong> Dino is a open-source chat client for the desktop. It aims to provide a clean user interface, reliable Jabber/XMPP experience and modern features while having the users privacy in mind.</li>
+  <li><strong>Brief explanation:</strong> Dino displays messages as they come in and allows to go back in time as a user scrolls up. However, there is no way to search through messages. This project should add a UI to quickly and intuitively search through locally stored messages with the possibility to view the context of a result.</li>
+  <li><strong>Expected results:</strong>
+      <ul>
+          <li>Intuitive UI for searching through messages</li>
+          <li>Possibility to explore the context of a search result</li>
+          <li>Performant search</li>
+      </ul>
+  </li>
+  <li><strong>Difficulty:</strong> Moderate</li>
+  <li><strong>Implementation Language:</strong> Vala</li>
+  <li><strong>Contact Details:</strong> MUC at <a href="xmpp:gsoc@dino.im?join">gsoc@dino.im</a></li>
+</ul>
+
+<h4>Dino: On-boarding experience</h4>
+<ul>
+  <li><strong>Software Project:</strong> Dino</li>
+  <li><strong>Software URL:</strong> <a href="https://dino.im">https://dino.im</a></li>
+  <li><strong>Software VCS URL:</strong> <a href="https://github.com/dino/dino">https://github.com/dino/dino</a></li>
+  <li><strong>Software Description</strong> Dino is a open-source chat client for the desktop. It aims to provide a clean user interface, reliable Jabber/XMPP experience and modern features while having the users privacy in mind.</li>
+  <li><strong>Brief explanation:</strong> When a user first starts Dino, they get to a screen informing them that there are no accounts, they can then get to a window that offers to add an account and then to a window where they can enter their JID and password. This procedure is neither fast, nor intuitive, nor does it handle errors or provide advanced options. The goal of this project is to rework the on-boarding experience. A student doing the project will have to design a viable user experience and decide about relevant features and how to present them. A student may extend this project by considering an XMPP easy-onboarding process.</li>
+  <li><strong>Relevant readings:</strong>
+    <ul>
+        <li><a href="https://xmpp.org/extensions/xep-0077.html">XEP-0077: In-Band Registration</a></li>
+        <li><a href="https://xmpp.org/extensions/xep-0389.html">XEP-0389: Extensible In-Band Registration</a></li>
+        <li><a href="https://wiki.xmpp.org/web/Easy_Onboarding">Easy onboarding</a></li>
+        <li><a href="https://xmpp.org/extensions/xep-0379.html">XEP-0379: Pre-Authenticated Roster Subscription</a></li>
+    </ul>
+  </li>
+  <li><strong>Expected results:</strong>
+      <ul>
+          <li>Account creation</li>
+          <li>Certificate error handling</li>
+          <li>Hostname and port configuration</li>
+      </ul>
+  </li>
+  <li><strong>Difficulty:</strong> Moderate</li>
+  <li><strong>Implementation Language:</strong> Vala</li>
+  <li><strong>Contact Details:</strong> MUC at <a href="xmpp:gsoc@dino.im?join">gsoc@dino.im</a></li>
+</ul>
+
+<h4>Dino: In-Band Real Time texting</h4>
+<ul>
+  <li><strong>Software Project:</strong> Dino</li>
+  <li><strong>Software URL:</strong> <a href="https://dino.im">https://dino.im</a></li>
+  <li><strong>Software VCS URL:</strong> <a href="https://github.com/dino/dino">https://github.com/dino/dino</a></li>
+  <li><strong>Software Description</strong> Dino is a open-source chat client for the desktop. It aims to provide a clean user interface, reliable Jabber/XMPP experience and modern features while having the users privacy in mind.</li>
+  <li><strong>Brief explanation:</strong> Real-time text is text transmitted instantly while it is being typed or created. The recipient can immediately read the sender's text as it is written, without waiting. It allows text to be used as conversationally as a telephone conversation, including in situations where speech is not practical (e.g., environments that must be quiet, environments too noisy to hear, restrictions on phone use, situations where speaking is a privacy or security concern, and/or when participant(s) are deaf or hard of hearing).</li>
+  <li><strong>Relevant readings:</strong>
+      <ul>
+          <li><a href="https://xmpp.org/extensions/xep-0301.html">XEP-0301: In-Band Real Time Text</a></li>
+      </ul>
+  </li>
+  <li><strong>Expected results:</strong>
+      <ul>
+          <li>Allow users to exchange text as they type with other users and other compatible clients</li>
+          <li>Performant input and output (UI rendering wise and network wise)</li>
+      </ul>
+  </li>
+  <li><strong>Difficulty:</strong> Easy</li>
+  <li><strong>Implementation Language:</strong> Vala</li>
+  <li><strong>Contact Details:</strong> MUC at <a href="xmpp:gsoc@dino.im?join">gsoc@dino.im</a></li>
+</ul>
+
     <h3>Your application</h3>
     <p class="lead">Thank you for your interest in participating in Google’s Summer of Code with conversations.im. Your application can be free form but should answer the following questions.</p>
     <ul>
